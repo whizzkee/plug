@@ -24,7 +24,7 @@ const Navbar = () => (
       {/* Right Links */}
       <div className="flex gap-6">
         <a
-          href="https://twitter.com/your_channel"
+          href="https://x.com/plugcoinonsol"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -37,7 +37,7 @@ const Navbar = () => (
           />
         </a>
         <a
-          href="https://dexscreener.com"
+          href="https://dexscreener.com/solana/5fkzvrrxhsstkgzms2t615yeb3k8wteuydzyleevefqi"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -50,7 +50,7 @@ const Navbar = () => (
           />
         </a>
         <a
-          href="https://t.me/your_channel"
+          href="https://t.me/plugofficialtg"
           target="_blank"
           rel="noopener noreferrer"
         >

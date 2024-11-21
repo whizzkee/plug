@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-gradient-to-b from-black via-gray-900 to-indigo-900 text-white min-h-screen">
+      <div className="bg-gradient-to-b from-black via-slate-800 to-black text-white min-h-screen">
         {/* Hero Section */}
         <header className="flex flex-col items-center justify-center min-h-screen relative">
           {/* Animated Background */}
@@ -46,6 +46,12 @@ const Home = () => {
             className="mt-10 bg-gradient-to-r from-indigo-500 to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform"
           >
             Discover Plug
+          </a>
+          <a
+            href="#links"
+            className="mt-10 bg-gradient-to-r from-indigo-500 to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform"
+          >
+            Buy now
           </a>
         </header>
 
@@ -74,33 +80,54 @@ const Home = () => {
         </section>
 
         {/* Links Section */}
-        <section id="links" className="py-20 text-center bg-gray-900">
+        <section id="links" className="py-20 text-center ">
           <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-purple-400">
             Unravel the Mystery
           </h2>
           <div className="flex justify-center items-center gap-12">
             <a
-              href="https://twitter.com"
+              href="https://x.com/plugcoinonsol"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-full shadow-lg transform hover:scale-110 transition-transform"
+              className="bg-black text-white p-6 rounded-full shadow-lg transform hover:scale-110 transition-transform"
             >
+              <Image
+                src="/images/twitter.svg"
+                className="w-9 h-9"
+                alt="Twitter"
+                width={256}
+                height={256}
+              />
               <i className="fab fa-twitter text-3xl"></i>
             </a>
             <a
-              href="https://dexscreener.com"
+              href="https://dexscreener.com/solana/5fkzvrrxhsstkgzms2t615yeb3k8wteuydzyleevefqi?__cf_chl_tk=5KWsjyV1MwaxFGXoSQbkQR7xh9bRCdO4.gDaBnIwVWw-1732149252-1.0.1.1-O6OH4OzOgtOvE2L1Tzf39xWe0k7_XKJMKpPLhVq37dY"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-6 rounded-full shadow-lg transform hover:scale-110 transition-transform"
+              className="bg-black text-white p-6 rounded-full shadow-lg transform hover:scale-110 transition-transform"
             >
+              <Image
+                src="/images/dexLogo.png"
+                className="w-9 h-9"
+                alt="DexScreener"
+                width={256}
+                height={256}
+              />
               <i className="fas fa-chart-line text-3xl"></i>
             </a>
             <a
-              href="https://telegram.org"
+              href="https://t.me/plugofficialtg"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-6 rounded-full shadow-lg transform hover:scale-110 transition-transform"
+              className="bg-black text-white p-6 rounded-full shadow-lg transform hover:scale-110 transition-transform"
             >
+              <Image
+                src="/images/telegram.svg"
+                className="w-9 h-9"
+                alt="Telegram"
+                width={256}
+                height={256}
+              />
               <i className="fab fa-telegram text-3xl"></i>
             </a>
           </div>
