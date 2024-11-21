@@ -48,7 +48,8 @@ const Home = () => {
             Discover Plug
           </a>
           <a
-            href="#links"
+            href="https://pump.fun/coin/Cw5WAZfh3KD1Y63tAR7UMHtoX9QvNZPVWaawnVufpump"
+            target="_blank"
             className="mt-10 bg-gradient-to-r from-indigo-500 to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform"
           >
             Buy now
