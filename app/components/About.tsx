@@ -3,7 +3,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between py-20 px-10 lg:px-20 gap-12">
+    <section
+      id="about"
+      className="flex flex-col lg:flex-row items-center justify-between py-20 px-10 lg:px-20 gap-12"
+    >
       <div className="lg:w-1/2 text-center lg:text-left">
         <h2 className="text-4xl md:text-5xl font-bold text-purple-300 mb-4">
           Fueling Mystery on Solana
