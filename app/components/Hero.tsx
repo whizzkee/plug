@@ -17,6 +17,12 @@ const Hero = () => {
     return () => clearInterval(typingInterval);
   }, []);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about');
+    aboutSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <header className="flex flex-col items-center justify-center min-h-screen relative pb-24 sm:pb-32">
       {/* Animated Background */}
@@ -40,6 +46,7 @@ const Hero = () => {
         <div className="flex flex-col space-y-4 sm:space-y-6 mt-8">
           <a
             href="#about"
+            onClick={handleScroll}
             className="bg-gradient-to-r from-indigo-500 to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-transform text-center"
           >
             Discover Plug
