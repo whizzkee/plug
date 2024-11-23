@@ -17,7 +17,7 @@ const About = () => {
         </p>
       </div>
       <div className="lg:w-1/2 w-full">
-        <div className="relative w-full h-80 lg:h-96 animate-float">
+        <div className="relative w-full h-80 lg:h-96 float-animation">
           <Image
             src="/images/plugAbout2.png"
             alt="Plug Art"
