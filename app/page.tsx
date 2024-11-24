@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import QRCodeComponent from "./components/QRCode";
+// import QRCodeComponent from "./components/QRCode";
 import About from "./components/About";
 import Links from "./components/Links";
 import Footer from "./components/Footer";
@@ -28,6 +28,7 @@ const Home = () => {
         <Navbar />
         <Hero />
         <About />
+        {/* <QRCodeComponent /> */}
         <Links />
         <Footer />
       </div>
