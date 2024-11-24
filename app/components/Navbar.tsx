@@ -27,6 +27,7 @@ const Navbar = () => (
           href="https://x.com/plugcoinonsol"
           target="_blank"
           rel="noopener noreferrer"
+          className="transform hover:scale-110 transition-transform duration-200"
         >
           <Image
             src="/images/twitter.svg"
@@ -40,6 +41,7 @@ const Navbar = () => (
           href="https://dexscreener.com/solana/5fkzvrrxhsstkgzms2t615yeb3k8wteuydzyleevefqi"
           target="_blank"
           rel="noopener noreferrer"
+          className="transform hover:scale-110 transition-transform duration-200"
         >
           <Image
             src="/images/dexLogo.png"
@@ -53,6 +55,7 @@ const Navbar = () => (
           href="https://t.me/plugofficialtg"
           target="_blank"
           rel="noopener noreferrer"
+          className="transform hover:scale-110 transition-transform duration-200"
         >
           <Image
             src="/images/telegram.svg"
