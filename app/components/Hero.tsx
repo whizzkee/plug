@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import QRCodeComponent from "./QRCode";
 
 const Hero = () => {
   const text = "Who is Plug?";
@@ -89,7 +90,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col space-y-4 sm:space-y-6 mt-8"
+          className="flex flex-col items-center space-y-4 sm:space-y-6 mt-8"
         >
           <a
             href="#about"
@@ -107,6 +108,15 @@ const Hero = () => {
           >
             Buy now
           </a>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-6"
+          >
+            <QRCodeComponent />
+          </motion.div>
         </motion.div>
       </div>
     </header>

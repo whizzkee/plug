@@ -6,8 +6,12 @@ import { QRCodeSVG } from 'qrcode.react';
 const QRCodeComponent = () => {
   const walletAddress = "Cw5WAZfh3KD1Y63tAR7UMHtoX9QvNZPVWaawnVufpump";
   const [copied, setCopied] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleCopy = async () => {
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     try {
       await navigator.clipboard.writeText(walletAddress);
       setCopied(true);
@@ -18,35 +22,37 @@ const QRCodeComponent = () => {
   };
 
   return (
-    <section className="py-16 px-4 text-center">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-purple-300 mb-8">$PLUG</h2>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-          {/* QR Code */}
-          <div className="bg-white p-4 rounded-lg">
-            <QRCodeSVG
-              value={walletAddress}
-              size={200}
-              level="H"
-              includeMargin={true}
-            />
-          </div>
-          
-          {/* Wallet Address and Copy Button */}
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="bg-black/50 p-4 rounded-lg max-w-full overflow-hidden">
-              <p className="text-gray-300 font-mono break-all">{walletAddress}</p>
-            </div>
-            <button
-              onClick={handleCopy}
-              className="bg-gradient-to-r from-indigo-500 to-purple-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform"
-            >
-              {copied ? 'Copied!' : 'Copy Address'}
-            </button>
-          </div>
-        </div>
+    <button 
+      onClick={handleCopy}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative group bg-white p-2 rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+      title="Click to copy address"
+    >
+      <QRCodeSVG
+        value={walletAddress}
+        size={120}
+        level="H"
+        includeMargin={true}
+      />
+      
+      {/* Hover overlay with copy text */}
+      <div 
+        className={`absolute inset-0 bg-black/10 flex items-center justify-center rounded-lg transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+      >
+        <span className="text-xs text-black font-medium">Click to copy</span>
       </div>
-    </section>
+
+      {/* Copy feedback overlay */}
+      {copied && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg text-white font-semibold animate-fade-out">
+          Copied!
+        </div>
+      )}
+
+      {/* Hover glow effect */}
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-700 rounded-lg opacity-0 group-hover:opacity-30 blur transition-opacity duration-300" />
+    </button>
   );
 };
 
