@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "Official website of Plug on Solana",
     images: [
       {
-        url: "/images/plugShare.webp",
+        url: "/images/plugShares.webp",
         width: 1200,
         height: 630,
         alt: "The Plug Coin",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Plug Coin",
     description: "Official website of Plug on Solana",
-    images: ["/images/plugShare.webp"],
+    images: ["/images/plugShares.webp"],
   },
 };
 
