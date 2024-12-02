@@ -8,19 +8,20 @@ import About from "./components/About";
 import Links from "./components/Links";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
+import Tokenomics from "./components/Tokenomics";
 import "./globals.css";
 
 const Home = () => {
-  const [loading, setLoading] = useState<boolean>(true);
+  //const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 5000); // Show loading for 5 seconds
-    return () => clearTimeout(timeout);
-  }, []);
+  //useEffect(() => {
+    //const timeout = setTimeout(() => setLoading(false), 5000); // Show loading for 5 seconds
+    //return () => clearTimeout(timeout);
+  //}, []);
 
-  if (loading) {
-    return <Loading />;
-  }
+  //if (loading) {
+    //return <Loading />;
+  //}
 
   return (
     <>
@@ -28,6 +29,7 @@ const Home = () => {
         <Navbar />
         <Hero />
         <About />
+        <Tokenomics />
         {/* <QRCodeComponent /> */}
         <Links />
         <Footer />
