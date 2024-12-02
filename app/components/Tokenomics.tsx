@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "@/styles";
 import { useState, useEffect } from "react";
 
 interface TokenData {
@@ -66,15 +65,12 @@ const Tokenomics = () => {
     const value = parseFloat(price);
     if (isNaN(value)) return "N/A";
     
-    // For very small numbers (less than 0.00001)
     if (value < 0.00001) {
       return `$${value.toExponential(2)}`;
     }
-    // For small numbers (less than 0.01)
     else if (value < 0.01) {
       return `$${value.toFixed(8)}`;
     }
-    // For regular numbers
     return `$${value.toFixed(4)}`;
   };
 
